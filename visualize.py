@@ -5,8 +5,8 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation, FFMpegWriter, PillowWriter
 
-FILENAME = "nbody_bh4.bin"
-OUTPUT   = "nbody_bh4.mp4"
+FILENAME = "nbody_bh.bin"
+OUTPUT   = "nbody_bh.mp4"
 
 def load_nbody(filename):
     with open(filename, "rb") as f:

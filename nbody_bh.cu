@@ -310,7 +310,7 @@ int main(const int argc, const char** argv) {
     float T = 20;
     int numSteps = static_cast<int>(T / dt);
 
-    FILE* f = fopen("nbody_barnes.bin", "wb");
+    FILE* f = fopen("nbody_bh.bin", "wb");
     if (!f) {
         perror("fopen");
         return 1;
