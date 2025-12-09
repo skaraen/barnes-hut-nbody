@@ -1,8 +1,8 @@
 # N-Body simulation using Barnes-Hut
-[Project report (PDF)](report.pdf)
-[Class presentation (PDF)](Presentation.pdf)
+- [Project report (PDF)](report.pdf)
+- [Class presentation (PDF)](Presentation.pdf)
 
-Simulation of an N-body system on GPUs with both brute-force and Barnes–Hut kernels. Includes Midway3 cluster run instructions, local build/run steps, benchmark recordings, and a summarized report.
+Simulation of an N-body system on GPUs with both brute-force and Barnes–Hut kernels.
 
 ## Prerequisites
 - NVIDIA GPU with CUDA support
