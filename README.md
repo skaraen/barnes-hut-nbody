@@ -93,6 +93,7 @@ The script performs basic validation and saves either an MP4 (FFmpeg) or GIF (Pi
 - Brute-force baseline: `simulations/nbody_brute.mp4`
 - Barnes–Hut sweeps: `simulations/nbody_bh1.mp4`, `simulations/nbody_bh2.mp4`, `simulations/nbody_bh3.mp4`, `simulations/nbody_bh4.mp4`
 - Legacy clips: `old/nbody.mp4`, `old/nbody_bh_th1.mp4`, `old/nbody_bh_th2.mp4`, `old/nbody_bh_th3.mp4`, `old/nbody_bh_th4.mp4`
+- GitHub-hosted recordings: https://github.com/skaraen/barnes-hut-nbody/tree/main/simulations
 
 ## Performance summary
 Karaen’s sweep shows how the Barnes–Hut opening angle (`theta`) trades accuracy for speed. Times below are average kernel time per step (ms) and total kernel time (s) for 20 simulated seconds at `dt=0.01`.
