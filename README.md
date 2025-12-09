@@ -1,6 +1,42 @@
 # N-Body simulation using Barnes-Hut
 Simulation of an N-Body system using the Barnes-Hut algorithm on GPUs
 
+## Running the code
+
+### Manual run
+Request a GPU allocation on Midway3 using the `srun` command. We used NVIDIA V100 for our simulations.
+```bash
+srun --nodes=1 --time=01:00:00 --account=<account_name> --partition=gpu --gres=gpu:1 --ntasks-per-node=1 --cpus-per-task=1 --constraint=<gpu_type> --pty zsh
+```
+
+Load the CUDA module to use `nvcc` to compile
+```bash
+module load cuda
+```
+
+**For the Brute force implementation**
+```bash
+nvcc -O3 nbody.cu -o nbody
+./nbody <number of particles>
+```
+
+**For the Barnes-Hut implementation**
+```bash
+nvcc -O3 nbody_bh.cu -o nbody_bh
+./nbody_bh <number of particles> <theta>
+```
+
+**To visualize the simulation**
+
+Change the name of the binary file to be parsed, output file format and title as required
+```bash
+module load python
+module load ffmpeg
+python visualize.py
+```
+
+### SLURM run
+
 ## Performance Analysis
 
 The increase in theta results in an increase in approximation and therefore results in higher speedup. We can also observe that the benefit of the the approximation is more evident when the number of particles drastically increase. However increasing theta also results in a compromise on accuracy.
