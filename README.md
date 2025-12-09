@@ -1,5 +1,6 @@
 # N-Body simulation using Barnes-Hut
 [Project report (PDF)](report.pdf)
+[Class presentation (PDF)](Presentation.pdf)
 
 Simulation of an N-body system on GPUs with both brute-force and Barnes–Hut kernels. Includes Midway3 cluster run instructions, local build/run steps, benchmark recordings, and a summarized report.
 
@@ -136,8 +137,8 @@ Karaen’s sweep shows how the Barnes–Hut opening angle (`theta`) trades accur
 ## Project structure
 - `nbody.cu`: Brute-force CUDA implementation.
 - `nbody_bh.cu`: Barnes–Hut CUDA implementation with configurable `theta`.
-- `report.tex`: LaTeX source for the project report (run `pdflatex report.tex`).
-- `presentation.tex`: Presentation slides (Beamer).
+- `report.tex`, `report.pdf`: LaTeX source and compiled project report.
+- `Presentation.pdf`: Slide deck for the class presentation.
 - `visualize.py`: Python script to verify and visualize simulation output.
 - `old/`, `simulations/`: Benchmark recordings.
 - `README.md`: This file.
