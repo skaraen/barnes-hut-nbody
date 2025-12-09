@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 import numpy as np
 import matplotlib
-matplotlib.use("Agg")   # non-interactive backend
+matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation, FFMpegWriter, PillowWriter
 
-FILENAME = "nbody.bin"
-OUTPUT   = "nbody.mp4"   # change to "nbody.gif" for GIF
+FILENAME = "nbody_bh4.bin"
+OUTPUT   = "nbody_bh4.mp4"
 
 def load_nbody(filename):
     with open(filename, "rb") as f:
@@ -36,8 +36,6 @@ def main():
     fig, ax = plt.subplots(figsize=(6, 6))
     scat = ax.scatter([], [], s=5)
 
-    # ax.set_xlim(xmin - margin_x, xmax + margin_x)
-    # ax.set_ylim(ymin - margin_y, ymax + margin_y)
     ax.set_xlim(-50, 50)
     ax.set_ylim(-50, 50)
     ax.set_aspect("equal", "box")
@@ -47,7 +45,7 @@ def main():
     def update(frame):
         pts = np.column_stack((x[frame], y[frame]))
         scat.set_offsets(pts)
-        ax.set_title(f"N-body simulation (step {frame+1}/{numSteps})")
+        ax.set_title(f"Barnes Hut N-body simulation θ = 1.0 (step {frame+1}/{numSteps})")
         return scat,
 
     ani = FuncAnimation(
